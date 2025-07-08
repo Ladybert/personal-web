@@ -56,4 +56,48 @@ window.addEventListener('load', function() {
     }, 1500);
 });
 
+const popupTriggers = document.querySelectorAll('.popup-trigger');
+const popupBg = document.querySelector('.popup-bg');
+const popupModal = document.querySelector('.popup-modal');
+const linkInput = document.getElementById('linkInput');
+const btnCancel = document.querySelector('.btn-cancel');
+const btnVisit = document.querySelector('.btn-visit');
+
+popupTriggers.forEach(trigger => {
+  trigger.addEventListener('click', (e) => {
+    e.preventDefault();
+    const link = trigger.getAttribute('data-link');
+    linkInput.value = link;
+    popupBg.style.display = 'flex';
+  });
+});
+
+linkInput.addEventListener('click', () => {
+  copyTextToClipboard(linkInput.value);
+});
+
+btnCancel.addEventListener('click', () => {
+  popupBg.style.display = 'none';
+});
+
+btnVisit.addEventListener('click', () => {
+  const link = linkInput.value;
+  if (link) window.open(link, '_blank');
+});
+
+popupBg.addEventListener('click', (e) => {
+  if (!popupModal.contains(e.target)) {
+    popupBg.style.display = 'none';
+  }
+});
+
+async function copyTextToClipboard(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    alert('Link copied to clipboard!');
+  } catch (err) {
+    alert('Error copying text: ' + err);
+  }
+}
+
 

@@ -453,6 +453,90 @@ aside nav ul li img {
     transition: all 0.3s ease;
 }
 
+.popup-bg {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin-inline: auto; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+
+.popup-bg .popup-modal {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 40%;
+    background-color: #fff;
+    padding: 3em;
+}
+
+.popup-bg .popup-modal .popup-head {
+    display: inherit;
+    flex-direction: column;
+    font-weight: 600;
+    gap: 5px;
+}
+
+.popup-bg .popup-modal .popup-head input[type=text] {
+    display: inherit;
+    font-weight: 500;
+    padding: 2vh;
+    width: 100%;
+    border: 1px solid #9B2BD8;
+    border-radius: 5px;
+    outline: none;
+    transition: border 300ms;
+}
+
+.popup-bg .popup-modal .popup-head input[type=text]:focus {
+    border: 1px solid #9B2BD8;
+    box-shadow: 3px 3px 15px rgba(155, 43, 216, 0.2);
+}
+
+.popup-bg .popup-modal .popup-btn-group {
+    display: inherit;
+    justify-content: space-between;
+}
+
+.popup-bg .popup-modal .popup-btn-group button {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 2vh 12vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popup-bg .popup-modal .popup-btn-group .btn-visit {
+    border: 1px solid #9B2BD8;
+    border-radius: 5px;
+    background-color: #9B2BD8;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    transition-delay: 400ms;
+    transition-timing-function: ease-in-out;
+    transition: all;
+}
+
+.popup-bg .popup-modal .popup-btn-group .btn-visit:hover {
+    border: 1px solid #B931FC;
+    background-color: #B931FC;
+}
+
+
+
 /* Responsive Design */
 @media (max-width: 1200px) { /* Desktop */
     header {
