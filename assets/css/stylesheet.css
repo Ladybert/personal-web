@@ -454,7 +454,7 @@ aside nav ul li img {
 }
 
 .popup-bg {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -652,6 +652,27 @@ aside nav ul li img {
         margin: 10px 0;
     }
 
+    .popup-bg .popup-modal {
+        width: 60%;
+        padding: 3vh;
+    }
+
+    .popup-bg .popup-modal .popup-btn-group {
+        display: inherit;
+        gap: 7px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .popup-bg .popup-modal .popup-btn-group button {
+        display: flex;
+        padding: 1vh 5vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
     .project-item {
         width: 90%;
         margin: 1em auto;
@@ -711,6 +732,7 @@ aside nav ul li img {
         justify-content: center;
         text-align: center;
         font-size: 1rem; 
+        padding: 2vh 10vh;
     }
 
     aside {
@@ -723,14 +745,45 @@ aside nav ul li img {
         pointer-events: auto;
     }
 
+    .services {
+        width: 100%;
+        margin: 0;
+    }
+
     .services .service-item {
         width: 100%;
         margin: 10px 2px;
+        font-size: 5px;
     }
 
-    .project-item {
+    .project {
+        margin: 0;
+    }
+
+    .popup-trigger {
         width: 100%;
-        margin: 1em auto;
+    }
+
+    .popup-bg .popup-modal {
+        width: 80%;
+        padding: 3vh;
+    }
+
+    .popup-bg .popup-modal .popup-btn-group {
+        display: inherit;
+        flex-direction: column-reverse;
+        gap: 7px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .popup-bg .popup-modal .popup-btn-group button {
+        display: flex;
+        padding: 1vh 5vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .about-content p {
